@@ -3,17 +3,92 @@
 
 <head>
     <title>Welcome to Our Wedding Page!</title>
+    <style>
+        /* CSS for the hamburger menu */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- Hamburger Menu -->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">☰ Menu</button>
+            <div class="dropdown-content">
+                <a href="#location">Location</a>
+                <a href="#hotels">Hotels</a>
+                <a href="#schedule">Schedule</a>
+            </div>
+        </div>
+    </div>
+
     <h1>Welcome to Our Wedding Page!</h1>
 
-    <h2>Date and Location</h2>
+    <h2 id="location">Date and Location</h2>
     <p><strong>Date:</strong> July 13, 2024</p>
     <p><strong>Location:</strong> Jonsered, outside of Gothenburg</p>
 
-    <h2>Schedule</h2>
+    <h2 id="schedule">Schedule</h2>
     <ul>
         <li>2:00 PM: Ceremony</li>
         <li>3:00 PM: Cocktail Hour</li>
@@ -21,7 +96,7 @@
         <li>10:00 PM: Dance Party</li>
     </ul>
 
-    <h2>Accommodations</h2>
+    <h2 id="hotels">Accommodations</h2>
     <p>We recommend the following hotels for your stay:</p>
     <ul>
         <li><a href="https://hotel-a-example.com">Hotel A</a></li>
