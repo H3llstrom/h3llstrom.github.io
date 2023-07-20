@@ -88,34 +88,134 @@
     <p><strong>Date:</strong> July 13, 2024</p>
     <p><strong>Location:</strong> Jonsered, outside of Gothenburg</p>
 
-    <h2 id="schedule">Schedule</h2>
-    <ul>
-        <li>2:00 PM: Ceremony</li>
-        <li>3:00 PM: Cocktail Hour</li>
-        <li>5:00 PM: Reception and Dinner</li>
-        <li>10:00 PM: Dance Party</li>
-    </ul>
+<!DOCTYPE html>
+<html>
 
-    <h2 id="hotels">Accommodations</h2>
-    <p>We recommend the following hotels for your stay:</p>
-    <ul>
-        <li><a href="https://hotel-a-example.com">Hotel A</a></li>
-        <li><a href="https://hotel-b-example.com">Hotel B</a></li>
-    </ul>
+<head>
+    <title>Welcome to Our Wedding Page!</title>
+    <style>
+        /* CSS for the left-sided hamburger menu */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    <h2>Dress Code</h2>
-    <p>Dress to impress! The dress code for the wedding is semi-formal.</p>
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
 
-    <h2>RSVP</h2>
-    <p>Please fill out the form below to let us know if you'll be attending the wedding:</p>
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
 
-    <!-- Replace 'link-to-your-supply-form' with the actual URL of your supply form -->
-    <p><a href="link-to-your-supply-form">RSVP Form</a></p>
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
 
-    <p>We are excited to celebrate this special day with you!</p>
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
 
-    <p>If you have any questions, feel free to reach out to us at <a
-            href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+        .content {
+            transition: margin-left 0.3s;
+            padding: 16px;
+        }
+
+        /* Add responsive styles */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Left-sided Hamburger Menu -->
+    <div class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#location" onclick="closeNav()">Location</a>
+        <a href="#hotels" onclick="closeNav()">Hotels</a>
+        <a href="#schedule" onclick="closeNav()">Schedule</a>
+    </div>
+
+    <div class="content">
+
+        <!-- Hamburger Menu Button -->
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+        <h1>Welcome to Our Wedding Page!</h1>
+
+        <h2 id="location">Date and Location</h2>
+        <p><strong>Date:</strong> July 13, 2024</p>
+        <p><strong>Location:</strong> Jonsered, outside of Gothenburg</p>
+
+        <h2 id="schedule">Schedule</h2>
+        <ul>
+            <li>2:00 PM: Ceremony</li>
+            <li>3:00 PM: Cocktail Hour</li>
+            <li>5:00 PM: Reception and Dinner</li>
+            <li>10:00 PM: Dance Party</li>
+        </ul>
+
+        <h2 id="hotels">Accommodations</h2>
+        <p>We recommend the following hotels for your stay:</p>
+        <ul>
+            <li><a href="https://hotel-a-example.com">Hotel A</a></li>
+            <li><a href="https://hotel-b-example.com">Hotel B</a></li>
+        </ul>
+
+        <h2>Dress Code</h2>
+        <p>Dress to impress! The dress code for the wedding is semi-formal.</p>
+
+        <h2>RSVP</h2>
+        <p>Please fill out the form below to let us know if you'll be attending the wedding:</p>
+
+        <!-- Replace 'link-to-your-supply-form' with the actual URL of your supply form -->
+        <p><a href="link-to-your-supply-form">RSVP Form</a></p>
+
+        <p>We are excited to celebrate this special day with you!</p>
+
+        <p>If you have any questions, feel free to reach out to us at <a
+                href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+
+    </div>
+
+    <script>
+        // JavaScript to control the hamburger menu
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("mySidebar").style.opacity = "1";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mySidebar").style.opacity = "0";
+        }
+    </script>
 
 </body>
 
